@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  background-color: rgb(182, 247, 234);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: rgb(251, 254, 191);
+  margin-bottom: 20px;
+  text-align: center;
+  border: 5px solid black;
+  padding: 5px;
+}
+
+main {
+  margin-top: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-template-rows: repeat(4, 140px);
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.block {
+  background-color: white;
+  border: 4px solid black;
+}
+#block1 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block2 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block3 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block4 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block5 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block6 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block7 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block8 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block9 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block10 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block11 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block12 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block13 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block14 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block15 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
+#block16 {
+  background-image: url(https://img.freepik.com/premium-photo/funny-monkey-with-colorful-headphones-primate-ape-animal-listening-music-generate-ai_98402-98800.jpg);
+  background-size: cover;
+}
