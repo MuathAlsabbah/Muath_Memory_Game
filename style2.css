@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://img.freepik.com/premium-photo/photo-abstract-purple-ink-frame-dark-background_1189966-20766.jpg');
+  background-size: cover;
+  font-family: 'Protest Guerrilla';
+}
+
+.centered {
+  background-color: rgb(35, 17, 61);
+  text-align: center;
+  border: 2px solid black;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  border: 10px solid rgb(53, 6, 86);
+  font-family: 'Protest Guerrilla';
+}
+
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(21, 12, 34);
+  color: white;
+  text-decoration: none;
+}
