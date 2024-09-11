@@ -12,7 +12,7 @@ const cardImages = [
   'https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/139484d9-a493-4e8a-9ef1-453a7fd92252/120d3586-28b2-4c3c-a244-af2d0b6cbf7b.png',
   'https://preview.redd.it/m4r7p5k99yt81.png?auto=webp&s=82932526b051ab9a61b71f7f95afbe4a655c9ba5',
   'https://geekygals.net/wp-content/uploads/2016/02/deadpool-thumbs-up.jpg',
-  'https://i.insider.com/5bc07a09bde70f74b26c8f87?width=700',
+  'https://w0.peakpx.com/wallpaper/222/630/HD-wallpaper-black-panther-avengers-black-infinity-logo-marvel-panther-war-wars.jpg',
   'https://i.pinimg.com/736x/5c/0d/b7/5c0db77f357dfbb8554b202c15a6abd1.jpg',
   'https://wallpapercave.com/wp/wp5187201.jpg',
   'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/de31c88e-87bd-48b5-afc9-1b9b2164e7ec/dfh0bdm-ec91e132-0855-4f13-bc6f-5822716fb527.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RlMzFjODhlLTg3YmQtNDhiNS1hZmM5LTFiOWIyMTY0ZTdlY1wvZGZoMGJkbS1lYzkxZTEzMi0wODU1LTRmMTMtYmM2Zi01ODIyNzE2ZmI1MjcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BIixyia_jwh0nCbd2MPfEkNPlbhPizbAg4RDFBrXHWw',
@@ -85,19 +85,14 @@ const checkMatch = () => {
   const secondImage = secondSelect.image
 
   if (firstImage === secondImage) {
-    console.log('match found')
     matchesFound++
     selectTracker.length = 0
 
-    console.log(matchesFound)
-    console.log(totalPairs)
     if (matchesFound === totalPairs) {
       alert('Well done champ. But you could surely be faster...')
       clearInterval(timeInterval)
     }
   } else {
-    console.log('no match')
-
     setTimeout(() => {
       firstSelect.block.style.backgroundImage = ''
       secondSelect.block.style.backgroundImage = ''
@@ -118,43 +113,40 @@ const resetFunction = () => {
 
 resetButton.addEventListener('click', resetFunction)
 
-let seconds = 25
-let timeInterval = setInterval(() => {
-  seconds--
-  if (seconds === 0) {
-    gameOver()
-  }
-  timer.innerHTML = `Time Remaining: ${seconds}`
-}, 1000)
 const gameOver = () => {
   clearInterval(timeInterval)
-  alert('What an absolute sloth! 🤡 Lock in bro 😭')
+  playSadTrombone()
+  stopBackgroundMusic()
 }
 const timer = document.createElement('div')
 timer.id = 'timer'
 
 document.body.insertBefore(timer, document.querySelector('main'))
 
+let seconds = 25
+let timeInterval = setInterval(() => {
+  seconds--
+  timer.innerHTML = `Time Remaining: ${seconds}`
+  if (seconds === 0) {
+    gameOver()
+  }
+}, 1000)
+
 // Get the audio element by its ID
 const backgroundMusic = document.getElementById('background-music')
+backgroundMusic.play()
 
-const pauseButton = document.createElement('button')
-pauseButton.id = 'pauseButton'
-pauseButton.textContent = 'Pause Music'
-document.body.insertBefore(pauseButton, document.querySelector('#reset'))
-
-const playButton = document.createElement('button')
-playButton.id = 'playButton'
-playButton.textContent = 'Play Music'
-document.body.insertBefore(playButton, document.querySelector('#pauseButton'))
-
-playButton.addEventListener('click', () => {
-  backgroundMusic.play()
-})
-
-pauseButton.addEventListener('click', () => {
+const stopBackgroundMusic = () => {
   backgroundMusic.pause()
-})
+  backgroundMusic.currentTime = 0
+}
+
+//sad trombone once lost
+const sadTromboneSound = document.getElementById('sad-trombone')
+
+const playSadTrombone = () => {
+  sadTromboneSound.play()
+}
 
 assigningMatches()
 showImagesTemporarily()
